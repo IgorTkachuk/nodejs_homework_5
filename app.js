@@ -56,8 +56,8 @@ app.use(function(err, req, res, next) {
     res.render('error');
 });
 
-server.listen(3000, function(){
-    console.log('App listening on port 3000');
+server.listen(process.env.PORT || 3000, function(){
+    console.log('App listening on port ', process.env.PORT || 3000);
 });
 
 const users = {}; // все пользователи чата
